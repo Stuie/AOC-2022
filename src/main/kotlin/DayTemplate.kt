@@ -8,8 +8,13 @@ fun main() {
     }
 
     val testInput = readInput("DayFIXME-Example")
-    check(part1(testInput) == -1)
-    check(part2(testInput) == -1)
+    val part1TestResult = part1(testInput)
+    val part2TestResult = part2(testInput)
+    val part1Expected = -1
+    val part2Expected = -1
+
+    check(part1TestResult == part1Expected) { "Part 1: Expected $part1Expected but got $part1TestResult" }
+    check(part2TestResult == part2Expected) { "Part 2: Expected $part2Expected but got $part2TestResult" }
 
     val input = readInput("DayFIXME")
     println(part1(input))
